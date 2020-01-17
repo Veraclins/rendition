@@ -1,4 +1,16 @@
 - commits:
+    - subject: 'DropDownButton: add support for background prop'
+      hash: b8c3b84e26282808e18e43ac0ddffcc2158454bd
+      body: ''
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Stef Kors <stef@balena.io>
+        signed-off-by: Stef Kors <stef@balena.io>
+      author: StefKors
+  version: 12.0.2
+  date: 2020-01-17T18:28:45.595Z
+- commits:
     - subject: Refactor utils file and remove unnecessary functions
       hash: af35872cbb71944dc26b91ee58ea0f72b111b7b8
       body: ''
