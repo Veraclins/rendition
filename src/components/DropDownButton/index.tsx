@@ -16,7 +16,9 @@ const TOGGLE_BUTTON_X_PADDING = 16;
 const CHEVRON_ICON_WIDTH = 12;
 const TOGGLE_BUTTON_WIDTH = 2 * TOGGLE_BUTTON_X_PADDING + CHEVRON_ICON_WIDTH;
 
-const ToggleBase = styled(Button)`
+const ToggleBase = styled(Button)<{
+	background?: string;
+}>`
 	min-width: 0;
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
@@ -25,14 +27,18 @@ const ToggleBase = styled(Button)`
 	vertical-align: top;
 	padding: 0 ${px(TOGGLE_BUTTON_X_PADDING)};
 	width: ${px(TOGGLE_BUTTON_WIDTH)};
+	background: ${props => props.background};
 `;
 
-const ButtonBase = styled(Button)`
+const ButtonBase = styled(Button)<{
+	background?: string;
+}>`
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
 	border-right: 0;
 	margin: 0;
 	width: calc(100% - ${px(TOGGLE_BUTTON_WIDTH)});
+	background: ${props => props.background};
 `;
 
 const MenuBase = styled.div<{
@@ -266,6 +272,7 @@ class DropDownButton extends React.Component<
 export interface InternalDropDownButtonProps extends ButtonProps {
 	label?: string | JSX.Element;
 	border?: boolean;
+	background?: string;
 	joined?: boolean;
 	alignRight?: boolean;
 	noListFormat?: boolean;
